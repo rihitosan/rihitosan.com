@@ -19,10 +19,11 @@
             </nav> */
 var d_menu_html = '<nav class="nav">'
 +'<ul class="drop_menu">'
-+'<li><a href="/game">game</a>'
++'<li><a href="/game">Game</a>'
 +'  <ul>'
 +  '<li><a href="/game/1">1</a>'
 + '</ul>'
++'<li><a href="https://rihitosan.github.io">Home</a>'
 +'</nav>'
 
  document.getElementById("d_menu").innerHTML=d_menu_html
