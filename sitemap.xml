@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <sitemap>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
       <loc>https://rihitosan.github.io/</loc>
-    </sitemap>
-    <sitemap>
+    </url>
+    <url>
       <loc>https://rihitosan.github.io/game/</loc>
-    </sitemap>
-    <sitemap>
+    </url>
+    <url>
       <loc>https://rihitosan.github.io/blog/</loc>
-    </sitemap>
-  </sitemapindex>
+    </url>
+  </urlset>
