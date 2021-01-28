@@ -24,7 +24,7 @@ var d_menu_html = '<nav class="nav">'
 +  '<li><a href="game/1">敵を棒で叩いて倒すやつ</a>'
 + '</ul>'
 +'<li><a href="blog">blog</a>'
-+'<li><a href="https://rihitosan.github.io">Home</a>'
++'<li><a href="/">Home</a>'
 +'  <ul>'
 +'</nav>'
 
