@@ -19,12 +19,12 @@
             </nav> */
 var d_menu_html = '<nav class="nav">'
 +'<ul class="drop_menu">'
-+'<li><a href="https://rihitosan.github.io/game">Game</a>'
++'<li><a href="../game">Game</a>'
 +'  <ul>'
 +  '<li><a href="1">敵を棒で叩いて倒すやつ</a>'
 + '</ul>'
-+'<li><a href="https://rihitosan.github.io/blog">blog</a>'
-+'<li><a href="https://rihitosan.github.io">Home</a>'
++'<li><a href="../blog">blog</a>'
++'<li><a href="../">Home</a>'
 +'  <ul>'
 +'</nav>'
 
