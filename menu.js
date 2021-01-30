@@ -25,7 +25,7 @@ var d_menu_html = '<nav class="nav">'
 + '</ul>'
 +'<li><a href="blog">blog</a>'
 +'<li><a href="/">Home</a>'
-+'  <ul>'
-+'</nav>'
++'<li><a href="https://qiita.com/rihitosan">qiita</li>'
+
 
  document.getElementById("d_menu").innerHTML=d_menu_html
