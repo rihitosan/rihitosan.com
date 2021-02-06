@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../dropdown.css">
+	<script src="run_prettify.js"></script>
+	<title>javascriptでシューティングゲームみたいなものを作る③-rihitoのblog</title>
+    </head>
+    <body style="background:#000000;">
+    <div id="d_menu"></div>
+    <div id="menu"class="menu"></div>
+	<div class="honbun" style="background:#ffffff">
+<h1>javascriptでシューティングゲームみたいなものを作る③</h1>
+こんにちはrihitoです。<br>
+javascriptでシューティングゲームみたいなものを作る第三回目です。<br>
+
+<h2>動機</h2>
+暇だから<br>
+
+<h2>対象読者</h2>
+・javascriptをある程度できる人<br>
+・ゲームを作りたい人<br>
+・暇な人<br>
+・とりあえず何かしたい人<br>
+
+今回は、当たり判定を実装していきたいと思います<br>
+
+<h2>記事</h2>
+<a href="https://qiita.com/rihitosan/items/1d39f97cf70a82294756">javascriptでシューティングゲームみたいなものを作る①</a><br>
+<a href="#">javascriptでシューティングゲームみたいなものを作る②</a><br>
+<a href="https://github.com/rihitosan/memo/tree/main/qiita/shooting/2">今回のソースコード</a><br>
+
+<h2>enemyとレーザーの当たり判定</h2>
+playerのレーザーに当たるようにenemyの座標を変更します。<br>
+main.js 13行目~
+<pre class="prettyprint">
+//enemyの座標
+var ex = [100];
+var ey = [100];
+</pre>
+
+まず、当たり判定をするにはどのようにしたら良いのでしょうか？<br>
+当たり判定をするには、このようなことが考えられます。<br>
+<br>
+<li>レーザーのx座標 < enemyのx座標</li>
+<li>レーザーのy座標 < enemyのy座標</li>
+<li>レーザーのx座標+レーザーの横 > enemyのx</li>
+<li>レーザーのy座標+レーザーの縦 > enemyのx</li>
+<br>
+なぜ、このようになったのでしょうか?<br>
+それはこの画像を見たらわかると思います。<br>
+<img src="img/hoto13.png">
+
+<div id="menu_sita"></div>
+	</div>
+        </body>
+        <script src="../menu.js"></script>
+</html>

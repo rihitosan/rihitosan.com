@@ -1,8 +1,9 @@
  /**menu html */
  var html = "<p>menu</p>"
-            +"hello"
 
- document.getElementById("menu").innerHTML=html
+if(document.getElementById("menu") != null){
+  document.getElementById("menu").innerHTML=html
+}
 /**************************************************************** */
 
  /**dropdown menu html */
@@ -19,13 +20,24 @@
             </nav> */
 var d_menu_html = '<nav class="nav">'
 +'<ul class="drop_menu">'
-+'<li><a href="/game">Game</a>'
++'<li><a href="https://rihitosan.com/game">Game</a>'
 +'  <ul>'
-+  '<li><a href="game/1">敵を棒で叩いて倒すやつ</a>'
++  '<li><a href="https://rihitosan.com/game/1">敵を棒で叩いて倒すやつ</a>'
 + '</ul>'
-+'<li><a href="blog">blog</a>'
-+'<li><a href="/">Home</a>'
-+'<li><a href="https://qiita.com/rihitosan">qiita</li>'
++'<li><a href="https://rihitosan.com/blog">blog</a>'
++'<li><a href="https://rihitosan.com">Home</a>'
++'  <ul>'
++'</nav>'
+
+if(document.getElementById("d_menu") != null){
+  document.getElementById("d_menu").innerHTML=d_menu_html
+}
 
 
- document.getElementById("d_menu").innerHTML=d_menu_html
+//下のメニュー
+var menu_sita = ''
++'<h2 style="background:#000000;color:#ffffff;">Menu</h2>'
+
+if(document.getElementById("menu_sita") != null){
+  document.getElementById("menu_sita").innerHTML = menu_sita
+}

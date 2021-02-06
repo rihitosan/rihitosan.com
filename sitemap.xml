@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-      <loc>https://rihitosan.github.io/</loc>
-    </url>
-    <url>
-      <loc>https://rihitosan.github.io/game/</loc>
-    </url>
-    <url>
-      <loc>https://rihitosan.github.io/blog/</loc>
-    </url>
-  </urlset>
+<?xml version="1.0" encoding="UTF-8" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+        <loc>http://rihitosan.com/index.html<loc>
+</url>
+<url>
+        <loc>http://rihitosan.com/blog/index.html<loc>
+</url>
+<url>
+        <loc>http://rihitosan.com/game/index.html</loc>
+</url>
+
+</urlset

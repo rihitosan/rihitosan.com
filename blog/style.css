@@ -5,36 +5,27 @@ top:0;
 left:81%;
 width:20%;
 }
-
 .honbun{
     position:absolute;
     top:10%;
     left: 5%;
     width:75%;
 }
-
 .komidasi{
     width:80%;
     background:#dddddd;
 }
-
 .btn {
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.5;
+  font-size: 1.5rem;
+  font-weight: 1000;
+  line-height: 1;
   position: relative;
   display: inline-block;
   padding: 1rem 4rem; 
-  color: #00ff00;
+  color: #0000ff;
   background:#00ffff;
   border-radius: 12px;
 }
-
-#menu_sita{
-background:#ffffff;
-color:#000000;
-}
-
 .btn:hover{
-    background:linear-gradient(#05f,#f0f);
+    background:#009191;
 }
