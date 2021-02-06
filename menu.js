@@ -27,7 +27,7 @@ var d_menu_html = '<nav class="nav">'
 +'<li><a href="https://rihitosan.com/blog">blog</a>'
 +'<li><a href="https://qiita.com/rihitosan">qiita</a>'
 +'<li><a href="https://github.com/rihitosan">github</a>'
-+'<li><a href="https://rihitosan.com">hello</a>'
++'<li><a href="https://rihitosan.com">Home</a>'
 +'  <ul>'
 +'</nav>'
 
