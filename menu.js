@@ -26,7 +26,6 @@ var d_menu_html = '<nav class="nav">'
 + '</ul>'
 +'<li><a href="https://rihitosan.com/blog">blog</a>'
 +'<li><a href="https://qiita.com/rihitosan">qiita</a>'
-+'<li><a href="https://github.com/rihitosan">github</a>'
 +'<li><a href="https://rihitosan.com">Home</a>'
 +'  <ul>'
 +'</nav>'
@@ -39,6 +38,10 @@ if(document.getElementById("d_menu") != null){
 //下のメニュー
 var menu_sita = ''
 +'<h2 style="background:#000000;color:#ffffff;">Menu</h2>'
++'<h3>記事一覧</h3>'
++'<li><a href="https://rihitosan.com/blog/js_shooting2.html">javascriptでシューティングゲームみたいなものを作る②</li>'
++'<li><a href="https://rihitosan.com/blog/js_shooting3.html">javascriptでシューティングゲームみたいなものを作る③</li>'
++'<li><a href="https://rihitosan.com/blog/new-tab-kakkoyoku.html">新規タブをかっこよくする拡張機能を作ろう</li>'
 
 if(document.getElementById("menu_sita") != null){
   document.getElementById("menu_sita").innerHTML = menu_sita
