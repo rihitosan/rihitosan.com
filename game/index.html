@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>棒で敵を倒すやつ</title>
-	<meta property="og:url" content="index.html" />
-	<meta property="og:title" content="棒で敵を倒すやつ(ゲーム)" /> 
-	<meta property="og:description" content="Unityでゲームを作りました。" /> 
-	<meta property="og:image" content="../sns_card.png" />
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/1.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">game</div>
-      </div>
-    </div>
-  </body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../dropdown.css">
+	<link rel="icon" type="image/x-icon" href="../icon.png">
+	<title>rihitoの適当に作ったゲーム集</title>
+    </head>
+    <body style="background:#000000;color:#ffffff;">
+    <div id="d_menu"></div>
+    <div id="menu"class="menu"></div>
+	<div class="honbun">
+        <center>
+            <h1>Game一覧</h1>
+            <h2>適当に作ったゲームを公開しています。</h2>
+            <h2><li>敵を棒で叩いて倒すやつ</li></h2>
+            <a href="1"><h3><div class="btn">play</div></h3></a>
+            <img src="back.png">
+	    <h2><li>ボールをおとすな</li></h2>
+            <a href="2"><h3><div class="btn">play</div></h3></a>
+            <img src="b_kuzu.png">
+        </center>
+<div id="menu_sita"></div>
+	<div>
+        </body>
+        <script src="../menu.js"></script>
 </html>
