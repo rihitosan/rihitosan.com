@@ -1,5 +1,13 @@
  /**menu html */
  var html = "<p>menu</p>"
+ +'<!-- Global site tag (gtag.js) - Google Analytics -->'
++'<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFSYKD45CL"></script>'
++'<script>'
++  'window.dataLayer = window.dataLayer || [];'
++'  function gtag(){dataLayer.push(arguments);}'
++"  gtag('js', new Date());"
++"  gtag('config', 'G-FFSYKD45CL');"
++"</script>"
 
 if(document.getElementById("menu") != null){
   document.getElementById("menu").innerHTML=html
