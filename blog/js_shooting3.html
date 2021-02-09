@@ -6,6 +6,11 @@
         <link rel="stylesheet" href="../dropdown.css">
 	<script src="run_prettify.js"></script>
 	<title>javascriptでシューティングゲームみたいなものを作る③-rihitoのblog</title>
+	<!--sns card--!>
+	<meta property="og:url" content="js_shooting3.html" />
+	<meta property="og:title" content="javascriptでシューティングゲームみたいなものを作る③-rihitoのblog" /> 
+	<meta property="og:description" content="今回は、当たり判定を実装していきたいと思います" /> 
+	<meta property="og:image" content="../sns_card.png" />
     </head>
     <body style="background:#000000;">
     <div id="d_menu"></div>
@@ -150,7 +155,7 @@ main.js 85行目~
     }
     
     function l_draw(){
-        for(var i = 0;i < lx.length;i++){
+        for(var i = 0;i &lt; lx.length;i++){
             ctx.beginPath()
             ctx.rect(lx[i],ly[i],5,2)
             ctx.fillStyle = "#ff0000"
@@ -159,7 +164,7 @@ main.js 85行目~
         }
     }
     function e_draw(){
-        for(var i = 0;i < lx.length;i++){
+        for(var i = 0;i &lt; lx.length;i++){
             ctx.beginPath()
             ctx.rect(ex[i],ey[i],12,12)
             ctx.fillStyle="#ff00ff"
@@ -170,9 +175,9 @@ main.js 85行目~
     function l_collision(){
         var collision = false   //衝突したか
         var collision_n = 0  //衝突したenemyの個体番号
-        for(var i = 0;i < lx.length;i++){
-            for(var j = 0;j < ex.length;j++){
-                if(ey[j] + 12 > ly[i]&& ex[j] + 12 >lx[i] &&ey[j] < ly[i]+2&& ex[j] <lx[i]+5){
+        for(var i = 0;i &lt; lx.length;i++){
+            for(var j = 0;j &lt; ex.length;j++){
+                if(ey[j] + 12 > ly[i]&& ex[j] + 12 >lx[i] &&ey[j] &lt; ly[i]+2&& ex[j] &lt; lx[i]+5){
                     console.log("衝突しました!")
                     collision = true
                     collision_n = j //個体番号を衝突した個体番号にする
@@ -214,11 +219,11 @@ main.js 85行目~
             ex.splice(l_return[1],1)
             ey.splice(l_return[1],1)
         }
-        for(var i = 0;i < lx.length/*リストの長さ*/;i++){   //リストを読み込む
+        for(var i = 0;i &lt; lx.length/*リストの長さ*/;i++){   //リストを読み込む
             lx[i] += 1  //今読み込んでいるレーザーを動かす
         }
         e_draw()
-        for(var i = 0;i < ex.length/*リストの長さ*/;i++){   //リストを読み込む
+        for(var i = 0;i &lt; ex.length/*リストの長さ*/;i++){   //リストを読み込む
             ex[i] -= 1  //今読み込んでいるenemyを動かす
         }
         //playerを動かす
