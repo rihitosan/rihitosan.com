@@ -1,5 +1,5 @@
 .body{
-    background:#eeeeee;
+    background:#dddddd;
 }
 
 .menu{
@@ -10,6 +10,7 @@ left:81%;
 }
 
 .honbun{
+    background:#ffffff;
     position:absolute;
     top:10%;
     left: 12%;
