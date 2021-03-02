@@ -1,5 +1,5 @@
  /**menu html */
- var html = "<p>menu</p>"
+ var html = ""
 
 if(document.getElementById("menu") != null){
   document.getElementById("menu").innerHTML=html
