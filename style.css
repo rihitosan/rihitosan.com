@@ -42,11 +42,11 @@ color:#000000;
   border-radius: 25px;
   text-decoration: none;
   color: #FFF;
-  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  background-image: linear-gradient(45deg, #ff3cac 0%, #2b86c5 100%);
   transition: .4s;
 }
 
 .btn:hover {
-  background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+  background-image: linear-gradient(45deg, #2b86c5 0%, #ff3cac 100%);
 }
 
