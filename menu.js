@@ -19,11 +19,11 @@ if(document.getElementById("menu") != null){
             </ul>
             </nav> */
 var d_menu_html = '<nav class="nav">'
-+'<div class="drop_menu">'
-+'<a href="https://rihitosan.com/game">Game</a>'
-+'<a href="https://rihitosan.com/blog">blog</a>'
-+'<a href="https://qiita.com/rihitosan">qiita</a>'
-+'<a href="https://rihitosan.com">Home</a>'
++'<div class="ue_menu">'
++'<a class="ue_ml" href="https://rihitosan.com/game">Game</a>'
++'<a class="ue_ml" href="https://rihitosan.com/blog">blog</a>'
++'<a class="ue_ml" href="https://qiita.com/rihitosan">qiita</a>'
++'<a class="ue_ml" href="https://rihitosan.com">Home</a>'
 +'</div>'
 
 if(document.getElementById("d_menu") != null){
