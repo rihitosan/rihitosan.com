@@ -34,7 +34,7 @@ if(document.getElementById("d_menu") != null){
   document.getElementById("d_menu").innerHTML=d_menu_html
 }
 
-document.bgColor = "#202020";
+document.bgColor = "#cccccc";
 
 
 //下のメニュー
