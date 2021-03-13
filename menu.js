@@ -18,7 +18,7 @@ if(document.getElementById("menu") != null){
             <li><a href="リンク先URL">メニュー3</a>
             </ul>
             </nav> */
-var d_menu_html = '<nav class="nav">'
+var d_menu_html = ''
 +'<div class="ue_menu">'
 +'<a class="ue_ml" href="https://rihitosan.com/game">Game</a>'
 +'<a class="ue_ml" href="https://rihitosan.com/blog">blog</a>'
