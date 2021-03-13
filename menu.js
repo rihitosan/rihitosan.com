@@ -19,16 +19,12 @@ if(document.getElementById("menu") != null){
             </ul>
             </nav> */
 var d_menu_html = '<nav class="nav">'
-+'<ul class="drop_menu">'
-+'<li><a href="https://rihitosan.com/game">Game</a>'
-+'  <ul>'
-+  '<li><a href="https://rihitosan.com/game/1">敵を棒で叩いて倒すやつ</a>'
-+ '</ul>'
-+'<li><a href="https://rihitosan.com/blog">blog</a>'
-+'<li><a href="https://qiita.com/rihitosan">qiita</a>'
-+'<li><a href="https://rihitosan.com">Home</a>'
-+'  <ul>'
-+'</nav>'
++'<div class="drop_menu">'
++'<a href="https://rihitosan.com/game">Game</a>'
++'<a href="https://rihitosan.com/blog">blog</a>'
++'<a href="https://qiita.com/rihitosan">qiita</a>'
++'<a href="https://rihitosan.com">Home</a>'
++'</div>'
 
 if(document.getElementById("d_menu") != null){
   document.getElementById("d_menu").innerHTML=d_menu_html
@@ -39,7 +35,7 @@ document.bgColor = "#dfe6f0";
 
 //下のメニュー
 var menu_sita = ''
-+'<h2 style="background:#000000;color:#ffffff;">Menu</h2>'
++'<h2 style="color:#ffffff;">Menu</h2>'
 +'<h3>記事一覧</h3>'
 +'<li><a href="https://rihitosan.com/blog/js_shooting2.html">javascriptでシューティングゲームみたいなものを作る②</li>'
 +'<li><a href="https://rihitosan.com/blog/js_shooting3.html">javascriptでシューティングゲームみたいなものを作る③</li>'
