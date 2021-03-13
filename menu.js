@@ -20,10 +20,10 @@ if(document.getElementById("menu") != null){
             </nav> */
 var d_menu_html = ''
 +'<div class="ue_menu">'
-+'<a class="ue_ml" href="https://rihitosan.com/game">Game</a>'
-+'<a class="ue_ml" href="https://rihitosan.com/blog">blog</a>'
-+'<a class="ue_ml" href="https://qiita.com/rihitosan">qiita</a>'
-+'<a class="ue_ml" href="https://rihitosan.com">Home</a>'
++'<a class="ue_ml" href="https://rihitosan.com/game"><span>Game</span></a>'
++'<a class="ue_ml" href="https://rihitosan.com/blog"><span>blog</span></a>'
++'<a class="ue_ml" href="https://qiita.com/rihitosan"><span>qiita</span></a>'
++'<a class="ue_ml" href="https://rihitosan.com"><span>Home</span></a>'
 +'</div>'
 
 if(document.getElementById("d_menu") != null){
