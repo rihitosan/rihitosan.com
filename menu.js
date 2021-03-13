@@ -34,6 +34,8 @@ if(document.getElementById("d_menu") != null){
   document.getElementById("d_menu").innerHTML=d_menu_html
 }
 
+document.getElementByTagName("body").style.background = "#cccccc"
+
 
 //下のメニュー
 var menu_sita = ''
