@@ -24,6 +24,12 @@
   border-radius: 12px;
 }
 
+.ue_menu{
+    background: "#ffffff";
+    width: "100%";
+    height: "7px";
+}
+
 #menu_sita{
 background:#ffffff;
 color:#000000;
