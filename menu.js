@@ -34,7 +34,7 @@ if(document.getElementById("d_menu") != null){
   document.getElementById("d_menu").innerHTML=d_menu_html
 }
 
-document.getElementsByTagName("body").style.background = "#cccccc"
+document.getElementsByTagName("body").style.backgroundColor = "#cccccc"
 
 
 //下のメニュー
