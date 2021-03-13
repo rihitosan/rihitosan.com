@@ -24,7 +24,7 @@
 }
 
 .ue_menu {
-  background:#ffffff;
+  background:#444444;
   width:100%;
 }
 .ue_ml {
@@ -34,8 +34,7 @@
   position: relative;
   display: inline-block;
   padding: 1rem 4rem; 
-  color: #00ff00;
-  background:#00ffff;
+  color: #00ffdf;
 }
 
 #menu_sita{
