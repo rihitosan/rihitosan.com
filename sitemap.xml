@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
- <loc>https://rihitosan.com/</loc>
+        <loc>http://rihitosan.com/index.html</loc>
 </url>
 <url>
- <loc>https://rihitosan.com/blog/</loc>
+        <loc>http://rihitosan.com/blog/index.html</loc>
 </url>
 <url>
- <loc>https://rihitosan.com/game/</loc>
+        <loc>http://rihitosan.com/game/index.html</loc>
 </url>
-<url>
- <loc>https://rihitosan.com/blog/js_shooting2.html</loc>
-</url>
-<url>
- <loc>https://rihitosan.com/blog/js_shoooting3.html</loc>
-</url>
-<url>
- <loc>https://rihitosan.com/blog/new-tab-kakkoyoku.html</loc>
-</url>
+
 </urlset>

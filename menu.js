@@ -1,46 +1,18 @@
- /**menu html */
- var html = ""
+var url = "https://rihitosan.com/"
 
-if(document.getElementById("menu") != null){
-  document.getElementById("menu").innerHTML=html
-}
-/**************************************************************** */
+logo_img_html = ''
++ '<a href="'+url+'" class="menu_link" style="float:left;">Home</a>'
++ '<a href="'+url+'/game" class="menu_link">Game</a>'
++ '<a href="qiita.com/rihitosan" class="menu_link">Qiita</a>'
++ '<a href="github.com/rihitosan" class="menu_link">Github</a>'
 
- /**dropdown menu html */
- /**<nav class="nav">
-            <ul class="drop_menu">
-            <li><a href="リンク先URL">メニュー1</a>
-              <ul>
-              <li><a href="リンク先URL">子メニュー1</a>
-              <li><a href="リンク先URL">子メニュー2</a>
-              </ul>
-            <li><a href="リンク先URL">メニュー2</a>
-            <li><a href="リンク先URL">メニュー3</a>
-            </ul>
-            </nav> */
-var d_menu_html = ''
-+'<div class="ue_menu">'
-+'<a class="ue_ml" href="https://rihitosan.com/game"><span>Game</span></a>'
-+'<a class="ue_ml" href="https://rihitosan.com/blog"><span>blog</span></a>'
-+'<a class="ue_ml" href="https://qiita.com/rihitosan"><span>qiita</span></a>'
-+'<a class="ue_ml" href="https://rihitosan.com"><span>Home</span></a>'
-+'</div>'
-
-if(document.getElementById("d_menu") != null){
-  document.getElementById("d_menu").innerHTML=d_menu_html
+if(document.getElementById("logo_img").innerHTML != null){
+    document.getElementById("logo_img").innerHTML = logo_img_html
 }
 
-document.bgColor = "#dfe6f0";
+sita_menu_html = ''
++'<span style="margin-left:70px;">© 2021 Rihtito</span>'
 
-
-//下のメニュー
-var menu_sita = ''
-+'<h2 style="color:#ffffff;">Menu</h2>'
-+'<h3>記事一覧</h3>'
-+'<li><a href="https://rihitosan.com/blog/js_shooting2.html">javascriptでシューティングゲームみたいなものを作る②</li>'
-+'<li><a href="https://rihitosan.com/blog/js_shooting3.html">javascriptでシューティングゲームみたいなものを作る③</li>'
-+'<li><a href="https://rihitosan.com/blog/new-tab-kakkoyoku.html">新規タブをかっこよくする拡張機能を作ろう</li>'
-
-if(document.getElementById("menu_sita") != null){
-  document.getElementById("menu_sita").innerHTML = menu_sita
+if(document.getElementById("sita_menu") != null){
+    document.getElementById("sita_menu").innerHTML = sita_menu_html
 }
