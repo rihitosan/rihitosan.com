@@ -27,6 +27,7 @@ var bottom = elm.scrollHeight - elm.clientHeight;
 window.scroll(0, bottom);
 if(text_code == ""){
     clearInterval(a_type);
+    location.href="./home.html"
 }
 }
 var a_type = setInterval(a,0.5)
