@@ -1,29 +1,22 @@
 
 console.log(document.getElementById("code").innerHTML)
 var text_code = document.getElementById("code").innerHTML
-var read = ""
 
 var a_type,aaa_type
 
-function redirect(){
-    location.href="./home.html";
-}
-
 function a(){
-    var i = 0
     while(true){
         if(text_code[0] == "\n"){
-            document.getElementById("main").innerHTML += read+"<br>"
-            read = ""
+            document.getElementById("main").innerHTML += text_code[0]+"<br>"
             text_code = text_code.slice(1)
             break;
         }else{
             if(text_code == ""){
                 break;
             }else{
-                read += text_code[0]
+                document.getElementById("main").innerHTML += text_code[0]
                 text_code = text_code.slice(1)
-                i += 1
+                break;
             }
         }
     }
@@ -34,9 +27,6 @@ var bottom = elm.scrollHeight - elm.clientHeight;
 window.scroll(0, bottom);
 if(text_code == ""){
     clearInterval(a_type);
-    setTimeout("redirect()",5)
 }
 }
-
-
-var a_type = setInterval(a,20)
+var a_type = setInterval(a,0.5)

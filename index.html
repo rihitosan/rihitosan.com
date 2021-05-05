@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <title>rihitoのホームページ</title>
     </head>
 
     <body style="background:#000;">
@@ -475,25 +474,6 @@ function me_b_collision(){
     }
     return [collision,c_list_n] //戻り値を複数にするためにリストにしている
 }
-
-//memo***************
-
-//休憩(衝突の図解)
-/*
-    block_x[i]+block_s   O
-    block_y[i]+block_s   O
-            ↓            O
-            Paaaaaaaaaaaaaaaaaaaaaa
-            a            O
-            a            O
-            a            O
-  OOOOOOOOOOaOOOOOOOOOOOOP ← block_x[i]
-            a            ↑
-            a            ↑
-            a            ↑
-            a            block_y[i]                   こんな感じ（´・ω・｀）つ www ニンジン
- o                                                                           OOO
-*/
 
 //キー押されたときの処理
 document.onkeydown = function(e){
