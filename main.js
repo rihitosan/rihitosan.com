@@ -5,6 +5,10 @@ var read = ""
 
 var a_type,aaa_type
 
+function redirect(){
+    location.href="./home.html";
+}
+
 function a(){
     var i = 0
     while(true){
@@ -30,6 +34,9 @@ var bottom = elm.scrollHeight - elm.clientHeight;
 window.scroll(0, bottom);
 if(text_code == ""){
     clearInterval(a_type);
+    setTimeout("redirect()",5)
 }
 }
+
+
 var a_type = setInterval(a,20)

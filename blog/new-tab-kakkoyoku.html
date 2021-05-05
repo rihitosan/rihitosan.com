@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../dropdown.css">
+	<script src="run_prettify.js"></script>
+	<title>新規タブをかっこよくするchorme拡張機能を作ろう-rihitoのblog</title>
+	<!--sns card-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@rihitosandayo" />
+	<meta property="og:url" content="new-tab-kakkoyoku.html" />
+	<meta property="og:title" content="新規タブをかっこよくするchorme拡張機能を作ろう-rihitoのblog" /> 
+	<meta property="og:description" content="今回は新規タブをかっこよくする拡張機能を作っていきたいと思います。" /> 
+	<meta property="og:image" content="https://rihitosan.com/sns_card.png" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94HD20ZTV4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-94HD20ZTV4');
+</script>
+    </head>
+    <body>
+    <div id="logo_img"></div>
+    <div id="ue_menu"></div>
+        <h1>新規タブをかっこよくする拡張機能を作ろう</h1>
+        こんにちはrihitoです。<br>
+        今回は新規タブをかっこよくする拡張機能を作っていきたいと思います。
+        <h2>なぜ、この記事を書いたか</h2>
+        単に新規タブの見た目を変えるchrome拡張機能を作る情報が少ないと思ったからです。<br>
+        なので情報が少ないなら自分で書いちゃえ<br>
+        というかんじで書書きました。<br>
+        まあ、自分のためのメモでもあるんですが。<br>
+        <h2>準備</h2>
+        以下のファイルを作ります<br>
+        ・<br>
+        |____manifest.json<br>
+        |____index.html<br>
+        |____style.css<br>
+
+        <h2>作り始めてみる</h2>
+        まずmanifest.jsonです。<br>
+        これは、chrome拡張機能の設定ファイルで、<br>
+        拡張機能の名前やIconなどを決めることができます。<br>
+        index.htmlとmain js は、新規タブの画面です。<br>
+        では、さっそくmanifest.jsonを書いていきたいと思います。<br>
+        <br>
+        manifest.json
+        <pre class="prettyprint">
+{
+    "name": "新規タブをかっこよくする",
+    "version": "1.0.0",
+    "description": "新規タブをかっこよくする",
+    "manifest_version": 2,
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "author": "your name"
+}
+        </pre>
+        "chrome_url_overrides": {<br>
+            "newtab": "index.html"<br>
+        },<br>
+        これは、新規タブをindex.htmlにするよ-ということです。<br>
+        では、htmlを書いていきたいと思います。
+        <pre class="prettyprint">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;link rel="stylesheet" href="style.css">
+    &lt;title>newtab&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;h1>Hello,world!&lt;/h1>
+&lt;/body>
+&lt;/html>
+        </pre>
+<h2>chormeで動かす</h2>
+まず、<a href="chrome://extensions/">chrome://extensions/</a>にアクセス<br>
+デベロッパーモードをONにする。<br>
+パッケージ化されていない拡張機能を読み込むを押す<br>
+manifest.jsonなどがあるフォルダを選択する<br>
+そして、Ctrl+Tを押すと新規タブにHello,worldと表示されます。<br>
+<img src="img/new-tab5.png"><br>
+このように新規タブをhtmlで記述することが出来るのです。<br>
+<h2>つまらないからきれいにしてみる</h2>
+いきなりソースコードです。
+inde.html
+<pre class="prettyprint">
+&lt;!DOCTYPE html>
+    &lt;html>
+        &lt;head>
+            &lt;meta charset="UTF-8">
+            &lt;link rel="stylesheet" href="style.css">
+        &lt;/head>
+    &lt;body bgcolor="#000000">
+        &lt;div class="rota1">
+            &lt;div class="ball1">&lt;/div>
+            &lt;div class="ball2">&lt;/div>
+            &lt;div class="ball3">&lt;/div>
+            &lt;div class="ball4">&lt;/div>
+            &lt;div class="text">&lt;h2>here text&lt;/h2>&lt;/div>
+        &lt;/div>
+        &lt;div class="rota2">
+            &lt;div class="ball5">&lt;/div>
+            &lt;div class="ball6">&lt;/div>
+            &lt;div class="ball7">&lt;/div>
+            &lt;div class="ball8">&lt;/div>
+            &lt;div class="text2">hello&lt;/div>
+        &lt;/div>
+    &lt;/body>
+&lt;/html>
+</pre>
+style.css
+<pre class="prettyprint">
+    .ball1{
+        width:200px;
+        height:200px;
+        background: #ff8900;
+        animation: rotation1 3s linear infinite;
+        border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+        opacity: 0.5;
+        position:absolute; top:100px; left:100px;
+      }
+      .ball2{
+          width:200px;
+          height:200px;
+          background: #d000ff;
+          animation: rotation2 3s linear infinite;
+          border-radius: 20% 80% 30% 30%/60%;
+          opacity: 0.4;
+          position:absolute; top:100px; left:100px;
+        }
+        .ball3{
+          width:200px;
+          height:200px;
+          background: #ff0500;
+          animation: rotation1 3s linear infinite;
+          border-radius: 40% 90% 60% 90%/20% 20% 50% 30%;
+          opacity: 0.4;
+          position:absolute; top:100px; left:100px;
+        }
+        .ball4{
+          width:200px;
+          height:200px;
+          background: #ffe500;
+          animation: rotation2 4s linear infinite;
+          border-radius: 80% 20% 70% 20%/20% 20% 10% 80%;
+          opacity: 0.6;
+          position:absolute; top:100px; left:100px;
+        }
+      
+        .ball5{
+          width:250px;
+          height:250px;
+          background: #00ff00;
+          animation: rotation1 3s linear infinite;
+          border-radius: 40% 20% 50% 60%/50% 50% 60% 60%;
+          opacity: 0.8;
+          position:absolute; top:100px; left:100px;
+        }
+      
+        .ball6{
+            width:250px;
+            height:250px;
+            background: #ffffff;
+            animation: rotation2 3s linear infinite;
+            border-radius: 80% 60% 30% 30%/90%;
+            opacity: 0.7;
+            position:absolute; top:100px; left:100px;
+          }
+          .ball7{
+            width:250px;
+            height:250px;
+            background: #ff05a0;
+            animation: rotation1 3s linear infinite;
+            border-radius: 50% 90% 60% 90%/40% 80% 20% 90%;
+            opacity: 0.7;
+            position:absolute; top:100px; left:100px;
+          }
+          .ball8{
+            width:250px;
+            height:250px;
+            background: #00ffff;
+            animation: rotation2 4s linear infinite;
+            border-radius: 60% 40% 80% 20%/20% 50% 20% 80%;
+            opacity: 0.5;
+            position:absolute; top:100px; left:100px;
+          }
+        
+        .text{
+            color:#00ffff;
+            position:absolute; top:150px; left:150px;
+            animation: rotation2 4s linear infinite;
+        }
+        .text2{
+          color:#ff0000;
+          position:absolute; top:170px; left:170px;
+      }
+        .rota1{
+          position:absolute; top:300px; left:400px;
+          animation: rotation1 4s linear infinite;
+        }
+        .rota2{
+          position:absolute; top:90px; left:175px;
+        }
+      @keyframes rotation1{
+          0%{transform:rotate(0);}
+          100%{transform:rotate(360deg);}
+      }
+      @keyframes rotation2{
+          0%{transform:rotate(0);}
+          100%{transform:rotate(-360deg);}
+      }
+    </pre>
+<img src="img/new-tab6.png"><br>
+<div id="sita_menu"></div>
+        </body>
+        <script src="../menu.js"></script>
+</html>
