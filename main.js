@@ -30,4 +30,4 @@ if(text_code == ""){
     location.href="./home.html"
 }
 }
-var a_type = setInterval(a,200)
+var a_type = setInterval(a,100)
