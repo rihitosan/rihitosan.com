@@ -86,14 +86,6 @@ var life = 3    //playerのlife
 
 var level_now = 1
 
-// ビジーwaitを使う方法
-function sleep(waitMsec) {
-    var startMsec = new Date();
-   
-    // 指定ミリ秒間だけループさせる（CPUは常にビジー状態）
-    while (new Date() - startMsec < waitMsec);
-}
-
 //player描画
 function player_draw(){
     ctx.beginPath()
