@@ -13,8 +13,9 @@ body
     transition: all 300ms 0s ease;
     background:#fff;
 }
-.honbun{
-    padding:1rem 3rem;
+.m_text{
+    padding:1rem 5rem;
+    width:60vw;
 }
 
 .s-2em {

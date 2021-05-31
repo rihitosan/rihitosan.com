@@ -28,6 +28,7 @@
     <body>
     <div id="logo_img"></div>
     <div id="ue_menu"></div>
+    <div class="m_text">
 <h1>javascriptでシューティングゲームみたいなものを作る③</h1>
 こんにちはrihitoです。<br>
 javascriptでシューティングゲームみたいなものを作る第三回目です。<br>
@@ -45,9 +46,8 @@ javascriptでシューティングゲームみたいなものを作る第三回�
 
 <h2>記事</h2>
 <a href="https://qiita.com/rihitosan/items/1d39f97cf70a82294756">javascriptでシューティングゲームみたいなものを作る①</a><br>
-<a href="https://rihitosan.com/blog/js_shooting2.html">javascriptでシューティングゲームみたいなものを作る②</a><br>
-<a href="https://rihitosan.com/blog/js_shooting3.html">javascriptでシューティングゲームみたいなものを作る③</a><br>
-<a href="https://github.com/rihitosan/memo/tree/main/qiita/shooting/3">今回のソースコード</a><br>
+<a href="#">javascriptでシューティングゲームみたいなものを作る②</a><br>
+<a href="https://github.com/rihitosan/memo/tree/main/qiita/shooting/2">今回のソースコード</a><br>
 
 <h2>enemyとレーザーの当たり判定</h2>
 playerのレーザーに当たるようにenemyの座標を変更します。<br>
@@ -177,7 +177,7 @@ main.js 85行目~
         }
     }
     function e_draw(){
-        for(var i = 0;i &lt; ex.length;i++){
+        for(var i = 0;i &lt; lx.length;i++){
             ctx.beginPath()
             ctx.rect(ex[i],ey[i],12,12)
             ctx.fillStyle="#ff00ff"
@@ -247,6 +247,7 @@ main.js 85行目~
     
     draw();
 </pre>
+</div>
 <div id="sita_menu"></div>
 	</div>
         </body>

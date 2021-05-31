@@ -28,6 +28,7 @@
     <body>
     <div id="logo_img"></div>
     <div id="ue_menu"></div>
+	<div class="m_text">
 <h1>javascriptでシューティングゲームみたいなものを作る②</h1>
 こんにちはrihitoです。<br>
 javascriptでシューティングゲームみたいなものを作る第二回目です。<br>
@@ -161,7 +162,7 @@ var ex = [0];
 var ey = [0];
 main.js_35行目～
 function e_draw(){
-    for(var i = 0;i < ex.length;i++){
+    for(var i = 0;i < lx.length;i++){
         ctx.beginPath()
         ctx.rect(ex[i],ey[i],7,7)
         ctx.fillStyle="#ff00ff"
@@ -217,7 +218,7 @@ function player_draw(){
 }
 
 function l_draw(){
-    for(var i = 0;i < ex.length;i++){
+    for(var i = 0;i < lx.length;i++){
         ctx.beginPath()
         ctx.rect(lx[i],ly[i],5,2)
         ctx.fillStyle = "#ff0000"
@@ -276,8 +277,8 @@ setInterval(draw,10)    //10ミリ秒単位で実行
 
 draw();
 </pre>
+</div>
 <div id="sita_menu"></div>
-	</div>
         </body>
         <script src="../menu.js"></script>
 </html>
