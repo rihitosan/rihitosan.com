@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-        <loc>http://rihitosan.com/index.html</loc>
+        <loc>http://rihitosan.com</loc>
 </url>
 <url>
-        <loc>http://rihitosan.com/blog/index.html</loc>
+        <loc>http://rihitosan.com/blog/</loc>
 </url>
 <url>
-        <loc>http://rihitosan.com/game/index.html</loc>
+        <loc>http://rihitosan.com/game/</loc>
 </url>
 <url>
         <loc>http://rihitosan.com/blog/js_shooting2.html</loc>
