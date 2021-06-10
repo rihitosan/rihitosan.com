@@ -4,8 +4,8 @@ logo_img_html = ''
 + '<a href="'+url+'" class="menu_link" style="float:left;">Home</a>'
 + '<a href="'+url+'/game" class="menu_link">Game</a>'
 + '<a href="'+url+'/blog" class="menu_link">Blog</a>'
-+ '<a href="qiita.com/rihitosan" class="menu_link">Qiita</a>'
-+ '<a href="github.com/rihitosan" class="menu_link">Github</a>'
++ '<a href="http://qiita.com/rihitosan" class="menu_link">Qiita</a>'
++ '<a href="http://github.com/rihitosan" class="menu_link">Github</a>'
 
 if(document.getElementById("logo_img").innerHTML != null){
     document.getElementById("logo_img").innerHTML = logo_img_html
