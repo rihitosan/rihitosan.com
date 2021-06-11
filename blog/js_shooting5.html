@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../dropdown.css">
+	<script src="run_prettify.js"></script>
+	<title>javascriptでシューティングゲームみたいなものを作る④-rihitoのblog</title>
+	<!--sns card-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@rihitosandayo" />
+	<meta property="og:url" content="js_shooting4.html" />
+	<meta property="og:title" content="javascriptでシューティングゲームみたいなものを作る⑤-rihitoのblog" /> 
+	<meta property="og:description" content="キャラクターに画像を適用など。最終回です。" /> 
+	<meta property="og:image" content="https://rihitosan.com/sns_card.png" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94HD20ZTV4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-94HD20ZTV4');
+</script>
+    </head>
+    <body>
+    <div id="logo_img"></div>
+    <div id="ue_menu"></div>
+    <div class="m_text">
+<h1>javascriptでシューティングゲームみたいなものを作る④</h1>
+現在の進歩状況<br>
+<img src="img/jssg4-5.png"><br><br>
+
+<h2>記事</h2>
+<a href="https://qiita.com/rihitosan/items/1d39f97cf70a82294756">javascriptでシューティングゲームみたいなものを作る①</a><br>
+<a href="https://rihitosan.com/blog/js_shooting2.html">javascriptでシューティングゲームみたいなものを作る②</a><br>
+<a href="https://rihitosan.com/blog/js_shooting3.html">javascriptでシューティングゲームみたいなものを作る③</a><br>
+<a href="https://rihitosan.com/blog/js_shooting4.html">javascriptでシューティングゲームみたいなものを作る④</a><br>
+<a href="https://github.com/rihitosan/memo/tree/main/qiita/shooting/5">今回のソースコード</a><br>
+
+<h1>見た目を修正</h1>
+いきなりよくわかんないこと言われてもよくわかんないかもしれませんが（？）<br>
+実はこれまでcanvasの大きさをstyleタグで決めてきてしまったのです。<br>
+これのデメリットは何かというとプレイヤーなどがぼやけるということです。いままでぼやけてたのもそのせいなのです。<br>
+著者の技術不足です。ごめんなさい。（（は？<br>
+さっきまでのstyleで指定するより、こっちのやりかたの方がはるかによくて推奨されるのでゲームを作るときはこっちにしてください。（えぇ<br>
+いきなりばーんとコードを貼ります。<br>
+すいません。<br>
+今回もgistで（index.htmlとmain.jsすべての変更）<br>
+<script src="https://gist.github.com/rihitosan/152f0dc0b68f11bcfd13af4430309eaf.js"></script>
+<img src="img/jssg5-1.png"><br>
+どこを変更したかと言うと変数全般です。（適当）<br>
+canvasをでかくしたので、canvas内に描画するものも大きくしなければならないのです。<br>
+んで、このコードをコピペするとこんな感じにcanvasがぼやけなくなります。<br>
+なので、これでプレイヤーなどに画像を適用できるのです。やったね！<br><br>
+<h2>キャラクターに画像を適用する（エクセルでドット絵を描く）</h2>
+ハイ、とうとうこのタイトル来ました。キャラクターに画像を適用していきたいと思います。<br>
+まずは、ドット絵の書き方からやっていきたいと思います。<br>
+今回はExcelで描いていきたいと思います。Excelはmicrosoft excelじゃなくても大丈夫です。（ちなみに、ここではwpsを使っています）<br>
+まず、エクセルを開きます。<br>
+<img src="img/jssg5-2.png"><br>
+そして、縦の幅と横の幅を変えます。縦12で横1.5にしてください。<br>
+変えたら、上の部分から好きな色を選んでポチポチして行けばキャラクター的なものができます。<br>
+ここではあくまでもゲームを作ることが目的なので、ドット絵は深くやらないことにします。（えぇ<br>
+まぁこんな感じでドット絵を描けるよと言う紹介です。<br>
+<img src="img/jssg5-3.png"><br>
+これで設定をいじってグリッド線をなくして、windowsペイントにコピーしてpngファイルで保存します。<br>
+そうして背景を透明にしてindex.htmlがあるフォルダにコピペします。（完全に説明が適当）<br>
+png背景の透明化はこのサイトでできます。<br>
+<a href="https://www.peko-step.com/tool/alphachannel.html">https://www.peko-step.com/tool/alphachannel.html</a><br>
+で、今回使う画像を適当にここに貼っておくので、index.htmlがあるフォルダに置いてください。（丸投げ）<br>
+player<br>
+<img src="img/jssg5-player.png"><br>
+enemy<br>
+<img src="img/jssg5-enemy.png">
+<h2>今から適用する（早くしろ）</h2>
+タイトル通りです。<br>
+それ以上でもそれ以下でもない（）<br>
+ちなみに、今のディレクトリの構造はこんな感じです。<br><br>
+|<br>
+ ├ndex.html<br>
+ ├main.js<br>
+ ├player.png<br>
+ ├enemy.png<br><br>
+ 
+ はい、とりあえずソースコードです。（口癖:とりあえずソースコードです）<br>
+ main.js21行目~<br>
+ <pre class="prettyprint">
+    //playerを描く関数
+    function player_draw(){
+        var player_img = new Image()
+        player_img.src="./player.png"
+        ctx.drawImage(player_img,px,py,50,50)
+    }
+    </pre>
+    これはただ単にplayer.pngを読み込んで表示させるだけのプログラムです。<br>
+    enemyの方も行きます。<br>
+    main.js37行目~<br>
+    <pre class="prettyprint">
+        function e_draw(){
+            for(var i = 0;i < ex.length;i++){
+                var enemy_img = new Image()
+                enemy_img.src = "./enemy.png"
+                ctx.drawImage(enemy_img,ex[i],ey[i],50,50)
+            }
+        }
+    </pre>
+    とりあえずこんな感じ。一気にゲームっぽさが増したかもしれない（？）<br>
+    <img src="img/jssg5-4.png">
+    <h2>今回のソースコード</h2>
+    これで一旦「javascriptでシューティングゲームみたいなものを作る」は終わりです。<br>
+    お疲れさまでした。<br>
+    今後ともゲーム開発頑張ってください。<br>
+    それでは<br><br>
+    player.png<br>
+    <img src="img/jssg5-player.png"><br>
+    enemy.png<br>
+    <img src="img/jssg5-enemy.png"><br>
+    <script src="https://gist.github.com/rihitosan/38cf7b75261e67203614aa01f80218c9.js"></script>
+
+
+</div>
+<div id="sita_menu"></div>
+	</div>
+        </body>
+        <script src="../menu.js"></script>
+</html>
