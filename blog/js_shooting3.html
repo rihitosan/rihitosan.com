@@ -5,7 +5,11 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="../dropdown.css">
-	<script src="run_prettify.js"></script>
+
+        <link rel="stylesheet" href="a11y-dark.min.css">
+        <script src="highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
 	<title>javascriptでシューティングゲームみたいなものを作る③-rihitoのblog</title>
 	<!--sns card-->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -55,10 +59,12 @@ javascriptでシューティングゲームみたいなものを作る第三回�
 <h2>enemyとレーザーの当たり判定</h2>
 playerのレーザーに当たるようにenemyの座標を変更します。<br>
 main.js 13行目~
-<pre class="prettyprint">
+<pre>
+    <code>
 //enemyの座標
 var ex = [100];
 var ey = [100];
+</code>
 </pre>
 main.js 38行目~
 <pre class="prettyprint">
@@ -80,7 +86,8 @@ ctx.rect(ex[i],ey[i],12,12)
 というわけで上で示したことをコードに書き下ろしていきたいと思います。<br>
 
 main.js 44行目~
-<pre class="prettyprint">
+<pre>
+    <code>
     function l_collision(){
         for(var i = 0;i &lt; lx.length;i++){
             for(var j = 0;j &lt; ex.length;j++){
@@ -90,10 +97,13 @@ main.js 44行目~
             }
         }
     }
+    </code>
 </pre>
 main.js 80行目~
-<pre class="prettyprint">
+<pre>
+    <code>
     l_collision()
+    </code>
 </pre>
 chromeの場合consoleを表示するには、Cnrl+Shift+Iキー。<br>
 または、●が縦に連なっているメニューボタン>>そのほかのツール>>デベロッパーツール<br>
@@ -101,7 +111,8 @@ chromeの場合consoleを表示するには、Cnrl+Shift+Iキー。<br>
 <img src="img/hoto14.png"><br>
 では、今度はレーザーと衝突したenemyを削除するプログラムを書いてみましょう。<br>
 main.js 44行目~
-<pre class="prettyprint">
+<pre>
+    <code>
     function l_collision(){
         var collision = false   //衝突したか
         var collision_n = 0  //衝突したenemyの個体番号
@@ -116,25 +127,31 @@ main.js 44行目~
         }
         return [collision,collision_n]
     }
+    </code>
 </pre>
 main.js 85行目~
-<pre class="prettyprint">
+<pre>
+    <code>
     var l_return = l_collision()   //衝突した個体番号などをl_returnに収納
     if(l_return[0]){
         //ぶつかった個体を削除する(リストから削除する)
         ex.splice(l_return[1],1)
         ey.splice(l_return[1],1)
     }
+    </code>
 </pre>
 <img src="img/hoto15.png"><br>
 ちなみに～.splice()は、リストの要素を削除するときに使う関数で、<br>
 こんな感じで使います。<br>
-<pre class="prettyprint">
+<pre>
+    <code>
 /*リスト名*/.splice(/*削除はじめの位置*/,/*削除する要素の数*/)
+</code>
 </pre>
 というわけで
 <h2>今回のコード</h2>
-<pre class="prettyprint">
+<pre>
+    <code>
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
         &lt;body&gt;
@@ -143,8 +160,10 @@ main.js 85行目~
             &lt;script src="main.js"&gt;&lt;/script&gt;
         &lt;/body&gt;
     &lt;/html&gt;
+    </code>
 </pre>
-<pre class="prettyprint">
+<pre>
+    <code>
     var canvas = document.getElementById("main");//canvasを読み込む
     var ctx = canvas.getContext("2d");
     var px = 10    //player x座標
@@ -249,6 +268,7 @@ main.js 85行目~
     setInterval(draw,10)    //10ミリ秒単位で実行
     
     draw();
+    </code>
 </pre>
 </div>
 <div id="sita_menu"></div>

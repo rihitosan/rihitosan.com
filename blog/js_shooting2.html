@@ -5,7 +5,11 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="../dropdown.css">
-	<script src="run_prettify.js"></script>
+
+        <link rel="stylesheet" href="a11y-dark.min.css">
+        <script src="highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
 	<title>javascriptでシューティングゲームみたいなものを作る②-rihitoのblog</title>
 	<!--sns card-->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -56,7 +60,8 @@ javascriptでシューティングゲームみたいなものを作る第二回�
 スペースキーが押されたらplyerにレーザーを描画する<br>
 <h3>まずレーザーを描く</h3>
 main.js_8行目～<br>
-<pre class="prettyprint">
+<pre>
+    <code>
 //レーザーの座標
 var lx =[0];   //レーザーをたくさん描けるようにするためリストにする
 var ly = [0];
@@ -78,9 +83,11 @@ function l_draw(){
     ctx.closePath()
 }
 //追加ここまで************
+</code>
 </pre>
 main.js_46行目～
-<pre class="prettyprint">
+<pre>
+    <code>
 function draw(){
     ctx.clearRect(0/*開始地点*/,0,canvas.width/*終了地点*/,canvas.height)   //canvasをいったんクリアする
     player_draw()  //追加
@@ -89,6 +96,7 @@ function draw(){
     px += p_dx
     py += p_dy
 }
+</code>
 </pre>
 <img src="img/hoto7.png"><br>
 
@@ -96,7 +104,8 @@ ly[0] は リストlyの0番目ということです。<br>
 
 <h2>動かしてみる</h2>
 main.js_46行目～<br>
-<pre class="prettyprint">
+<pre>
+    <code>
 function draw(){
     ctx.clearRect(0/*開始地点*/,0,canvas.width/*終了地点*/,canvas.height)   //canvasをいったんクリアする
     player_draw()  //追加
@@ -108,6 +117,7 @@ function draw(){
     px += p_dx
     py += p_dy
 }
+</code>
 </pre>
 <img src="img/hoto8.png"><br>
 
@@ -122,7 +132,8 @@ lx[3] += 1 //lxの3番目に1をたす<br>
 <h2>スペースキーが押されたときに発射する</h2>
 
 main.js_22行目～
-<pre class="prettyprint">
+<pre>
+    <code>
 function l_draw(){
     for(var i = 0;i < lx.length;i++){  //追加
         ctx.beginPath()
@@ -151,6 +162,7 @@ document.onkeydown = function(e){
     //追加ここまで*******************
 
 }
+</code>
 </pre>
 <img src="img/hoto9.png"><br>
 
@@ -158,7 +170,8 @@ document.onkeydown = function(e){
 playerの攻撃とさほど変わりはありません。<br>
 
 main.js_13行目～<br>
-<pre class="prettyprint">
+<pre>
+    <code>
 //enemyの座標
 var ex = [0];
 var ey = [0];
@@ -176,13 +189,15 @@ main.js_71行目～
  for(var i = 0;i < lx.length/*リストの長さ*/;i++){   //リストを読み込む
         lx[i] -= 1  //今読み込んでいるレーザーを動かす
     }
+</code>
 </pre>
 <img src="img/hoto12.png"><br>
 
 <h2>今回のコード</h2>
 
 index.html
-<pre class="prettyprint">
+<pre>
+    <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;body&gt;
@@ -191,9 +206,11 @@ index.html
         &lt;script src="main.js"&gt;&lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;
+    </code>
 </pre>
 main.js
-<pre class="prettyprint">
+<pre>
+    <code>
 var canvas = document.getElementById("main");//canvasを読み込む
 var ctx = canvas.getContext("2d");
 var px = 10    //player x座標
@@ -278,6 +295,7 @@ function draw(){
 setInterval(draw,10)    //10ミリ秒単位で実行
 
 draw();
+</code>
 </pre>
 </div>
 <div id="sita_menu"></div>

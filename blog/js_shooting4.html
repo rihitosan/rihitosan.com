@@ -5,7 +5,12 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="../dropdown.css">
-	<script src="run_prettify.js"></script>
+
+        
+        <link rel="stylesheet" href="a11y-dark.min.css">
+        <script src="highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
 	<title>javascriptでシューティングゲームみたいなものを作る④-rihitoのblog</title>
 	<!--sns card-->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -52,10 +57,12 @@
 もし前から読んでいた人がいれば（多分いない。いたらすごい）<a href="https://rihitosan.com/blog/js_shooting2.html">第二回目を読んで</a>訂正お願いします。<br>
 長引きましたがコードです。<br>
 main.js 13行目～<br>
-<pre class="prettyprint">
+<pre>
+    <code>
     //enemyの座標
     var ex = [200,200];
     var ey = [100,50];
+    </code>
 </pre>
 これだけです、えっこれだけ？と思うかもしれませんが。前に複数敵を描画できるようにしたからこれだけなのです。（自分えらい二回目）<br>
 そうしていろいろやって実行して、できたーってなるのです。javascript久しぶりだなぁ（（ﾅﾆｺﾉﾋﾄ<br>
@@ -65,11 +72,13 @@ main.js 13行目～<br>
 <img src="img/jssg4-2.png"><br>
 それでそのデータのリストに基づいてenemyを作ろうよ。と言うだけのことなのです。<br><br>
 で、ここですね。for文を使って何をしているかと言うと、単に個体番号順に描画しているだけです。<br>
-<pre class="prettyprint">
+<pre>
+    <code>
     for(var i = 0;i < lx.length;i++){
         ctx.beginPath()
         ctx.rect(lx[i],ly[i],5,2)
         //以下略
+    </code>
 </pre><br>
 ↓これを繰り返してるだけです。<br>
 <img src="img/jssg4-3.png"><br>
@@ -77,13 +86,15 @@ main.js 13行目～<br>
 <h2>敵をランダムな座標に作るよ</h2>
     はい、やることはタイトルの通りです。特に難しいことは全くないのでいきなりコードです。<br><br>
     main.js103行目~
-    <pre class="prettyprint">
+    <pre>
+        <code>
         //enemyをランダムな座標に作る
         function e_make(){
             ex.push(300)
             ey.push(Math.floor(Math.random()*130)) //0~129
         }
         setInterval(e_make,1000) //1.5秒おきに実行
+        </code>
     </pre>
     まず、push関数っていうのはリストにデータを追加するということです。<br>
     ここでは、exというリストにenemyの敵の座標データを追加しています。<br>
@@ -94,58 +105,74 @@ main.js 13行目～<br>
     <h2>点数を実装する</h2>
     簡単です。（それだけ）<br><br>
     main.js 17行目~
-    <pre class="prettyprint">
+    <pre>
+        <code>
         var p = 0; //点数（ポイント）
+        </code>
     </pre>
     main.js 52 行目~
-    <pre class="prettyprint">
+    <pre>
+        <code>
         console.log("衝突しました!")
         collision = true
         collision_n = j //個体番号を衝突した個体番号にする
         p += 1; //ポイントを1増やす（追加）
     }
+    </code>
     </pre>
     これで一応ポイントをカウントする機能は実装で来ているんですが、ポイントを表示させるプログラムはまだ書いてないのでほとんど違いはありません。<br>
     だから、ポイントを表示するプログラムも書いちゃいましょう。<br>
     main.js 46行目~
-    <pre class="prettyprint">
+    <pre>
+        <code>
         function p_draw(){
             ctx.font = "9px UTF-8"
             ctx.fillStyle="#ffff00"
             ctx.fillText(p,0,10)
         }
+        </code>
     </pre>
     main.js 94行目
-    <pre class="prettyprint">
+    <pre>
+        <code>
         p_darw()
+        </code>
     </pre>
     こんな感じに打った数だけ得点が追加されます。<br>
     <img src="img/jssg4-4.png"><br>
     <h2>ゲームオバーの実装（制限時間）</h2>
     <s>書くのめんどくさくなってきた</s>最後だからがんばる<br>
     main.js 19行目
-    <pre class="prettyprint">
+    <pre>
+    <code>
         var kt = new Date(); //時間
+        </code>
     </pre>
     main.js 111行目~
-    <pre class="prettyprint">
+    <pre>
+        <code>
         var t = new Date(); //今の時間（ミリ秒）を取得 
         if(t.getTime()-kt.getTime() >=60000){ //今の時間 >= 60秒
             clearInterval(mg)
             game_over()
         }
+        </code>
     </pre>
     main.js 121行目
-    <pre class="prettyprint">
+    <pre>
+        <code>
         var mg = setInterval(draw,10)    //10ミリ秒単位で実行 ※編集
+        </code>
     </pre>
     main.js 123行目~
-    <pre class="prettyprint">
+    <pre>
+        <code>
         function game_over(){
             ctx.font = "20px UTF-8"
             ctx.fillStyle="#ffff00"
             ctx.fillText("得点は"+p+"点です！",50,70)
         }
+        </code>
     </pre>
     色々やるとこうなります。（）<br>
     <img src="img/jssg4-5.png"><br>

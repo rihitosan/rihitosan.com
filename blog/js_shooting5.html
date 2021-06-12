@@ -5,7 +5,11 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="../dropdown.css">
-	<script src="run_prettify.js"></script>
+	
+        <link rel="stylesheet" href="a11y-dark.min.css">
+        <script src="highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
 	<title>javascriptでシューティングゲームみたいなものを作る④-rihitoのblog</title>
 	<!--sns card-->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -87,25 +91,28 @@ enemy<br>
  
  はい、とりあえずソースコードです。（口癖:とりあえずソースコードです）<br>
  main.js21行目~<br>
- <pre class="prettyprint">
+ <pre>
+     <code>
     //playerを描く関数
     function player_draw(){
         var player_img = new Image()
         player_img.src="./player.png"
         ctx.drawImage(player_img,px,py,50,50)
     }
+    </code>
     </pre>
     これはただ単にplayer.pngを読み込んで表示させるだけのプログラムです。<br>
     enemyの方も行きます。<br>
     main.js37行目~<br>
-    <pre class="prettyprint">
+    <pre>
+        <code>
         function e_draw(){
             for(var i = 0;i < ex.length;i++){
                 var enemy_img = new Image()
                 enemy_img.src = "./enemy.png"
                 ctx.drawImage(enemy_img,ex[i],ey[i],50,50)
             }
-        }
+        }</code>
     </pre>
     とりあえずこんな感じ。一気にゲームっぽさが増したかもしれない（？）<br>
     <img src="img/jssg5-4.png">

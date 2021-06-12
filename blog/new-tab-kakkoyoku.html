@@ -5,7 +5,11 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="../dropdown.css">
-	<script src="run_prettify.js"></script>
+	
+        <link rel="stylesheet" href="a11y-dark.min.css">
+        <script src="highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
 	<title>新規タブをかっこよくするchorme拡張機能を作ろう-rihitoのblog</title>
 	<!--sns card-->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -52,7 +56,8 @@
         では、さっそくmanifest.jsonを書いていきたいと思います。<br>
         <br>
         manifest.json
-        <pre class="prettyprint">
+        <pre>
+          <code>
 {
     "name": "新規タブをかっこよくする",
     "version": "1.0.0",
@@ -63,13 +68,15 @@
     },
     "author": "your name"
 }
+</code>
         </pre>
         "chrome_url_overrides": {<br>
             "newtab": "index.html"<br>
         },<br>
         これは、新規タブをindex.htmlにするよ-ということです。<br>
         では、htmlを書いていきたいと思います。
-        <pre class="prettyprint">
+        <pre>
+          <code>
 &lt;!DOCTYPE html>
 &lt;html>
 &lt;head>
@@ -81,6 +88,7 @@
     &lt;h1>Hello,world!&lt;/h1>
 &lt;/body>
 &lt;/html>
+</code>
         </pre>
 <h2>chormeで動かす</h2>
 まず、<a href="chrome://extensions/">chrome://extensions/</a>にアクセス<br>
@@ -93,7 +101,8 @@ manifest.jsonなどがあるフォルダを選択する<br>
 <h2>つまらないからきれいにしてみる</h2>
 いきなりソースコードです。
 inde.html
-<pre class="prettyprint">
+<pre>
+  <code>
 &lt;!DOCTYPE html>
     &lt;html>
         &lt;head>
@@ -117,9 +126,11 @@ inde.html
         &lt;/div>
     &lt;/body>
 &lt;/html>
+</code>
 </pre>
 style.css
-<pre class="prettyprint">
+<pre>
+  <code>
     .ball1{
         width:200px;
         height:200px;
@@ -219,6 +230,7 @@ style.css
           0%{transform:rotate(0);}
           100%{transform:rotate(-360deg);}
       }
+      </code>
     </pre>
 <img src="img/new-tab6.png"><br>
 </div>
