@@ -10,7 +10,7 @@
         <script src="highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
 
-	<title>javascriptでシューティングゲームみたいなものを作る⑤-rihitoのblog</title>
+	<title>javascriptでシューティングゲームみたいなものを作る④-rihitoのblog</title>
 	<!--sns card-->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@rihitosandayo" />
@@ -45,43 +45,43 @@
 <a href="https://github.com/rihitosan/memo/tree/main/qiita/shooting/5">今回のソースコード</a><br>
 
 <h1>見た目を修正</h1>
-いきなりよくわかんないこと言われてもよくわかんないかもしれませんが（？）<br>
-実はこれまでcanvasの大きさをstyleタグで決めてきてしまったのです。<br>
-これのデメリットは何かというとプレイヤーなどがぼやけるということです。いままでぼやけてたのもそのせいなのです。<br>
-著者の技術不足です。ごめんなさい。（（は？<br>
-さっきまでのstyleで指定するより、こっちのやりかたの方がはるかによくて推奨されるのでゲームを作るときはこっちにしてください。（えぇ<br>
-いきなりばーんとコードを貼ります。<br>
+いきなりよくわかんないこと言われてもよくわかんないかもしれませんが（？）<br><br>
+実はこれまでcanvasの大きさをstyleタグで決めてきてしまったのです。<br><br>
+これのデメリットは何かというとプレイヤーなどがぼやけるということです。いままでぼやけてたのもそのせいなのです。<br><br>
+著者の技術不足です。ごめんなさい。（（は？<br><br>
+さっきまでのstyleで指定するより、こっちのやりかたの方がはるかによくて推奨されるのでゲームを作るときはこっちにしてください。（えぇ<br><br>
+いきなりばーんとコードを貼ります。<br><br>
 すいません。<br>
 今回もgistで（index.htmlとmain.jsすべての変更）<br>
 <script src="https://gist.github.com/rihitosan/152f0dc0b68f11bcfd13af4430309eaf.js"></script>
 <img src="img/jssg5-1.png"><br>
 どこを変更したかと言うと変数全般です。（適当）<br>
-canvasをでかくしたので、canvas内に描画するものも大きくしなければならないのです。<br>
-んで、このコードをコピペするとこんな感じにcanvasがぼやけなくなります。<br>
+canvasをでかくしたので、canvas内に描画するものも大きくしなければならないのです。<br><br>
+んで、このコードをコピペするとこんな感じにcanvasがぼやけなくなります。<br><br>
 なので、これでプレイヤーなどに画像を適用できるのです。やったね！<br><br>
 <h2>キャラクターに画像を適用する（エクセルでドット絵を描く）</h2>
-ハイ、とうとうこのタイトル来ました。キャラクターに画像を適用していきたいと思います。<br>
-まずは、ドット絵の書き方からやっていきたいと思います。<br>
-今回はExcelで描いていきたいと思います。Excelはmicrosoft excelじゃなくても大丈夫です。（ちなみに、ここではwpsを使っています）<br>
+ハイ、とうとうこのタイトル来ました。キャラクターに画像を適用していきたいと思います。<br><br>
+まずは、ドット絵の書き方からやっていきたいと思います。<br><br>
+今回はExcelで描いていきたいと思います。Excelはmicrosoft excelじゃなくても大丈夫です。（ちなみに、ここではwpsを使っています）<br><br>
 まず、エクセルを開きます。<br>
 <img src="img/jssg5-2.png"><br>
-そして、縦の幅と横の幅を変えます。縦12で横1.5にしてください。<br>
-変えたら、上の部分から好きな色を選んでポチポチして行けばキャラクター的なものができます。<br>
-ここではあくまでもゲームを作ることが目的なので、ドット絵は深くやらないことにします。（えぇ<br>
-まぁこんな感じでドット絵を描けるよと言う紹介です。<br>
+そして、縦の幅と横の幅を変えます。縦12で横1.5にしてください。<br><br>
+変えたら、上の部分から好きな色を選んでポチポチして行けばキャラクター的なものができます。<br><br>
+ここではあくまでもゲームを作ることが目的なので、ドット絵は深くやらないことにします。（えぇ<br><br>
+まぁこんな感じでドット絵を描けるよと言う紹介です。<br><br>
 <img src="img/jssg5-3.png"><br>
-これで設定をいじってグリッド線をなくして、windowsペイントにコピーしてpngファイルで保存します。<br>
-そうして背景を透明にしてindex.htmlがあるフォルダにコピペします。（完全に説明が適当）<br>
-png背景の透明化はこのサイトでできます。<br>
-<a href="https://www.peko-step.com/tool/alphachannel.html">https://www.peko-step.com/tool/alphachannel.html</a><br>
-で、今回使う画像を適当にここに貼っておくので、index.htmlがあるフォルダに置いてください。（丸投げ）<br>
+これで設定をいじってグリッド線をなくして、windowsペイントにコピーしてpngファイルで保存します。<br><br>
+そうして背景を透明にしてindex.htmlがあるフォルダにコピペします。（完全に説明が適当）<br><br>
+png背景の透明化はこのサイトでできます。<br><br>
+<a href="https://www.peko-step.com/tool/alphachannel.html">https://www.peko-step.com/tool/alphachannel.html</a><br><br>
+で、今回使う画像を適当にここに貼っておくので、index.htmlがあるフォルダに置いてください。（丸投げ）<br><br>
 player<br>
 <img src="img/jssg5-player.png"><br>
 enemy<br>
 <img src="img/jssg5-enemy.png">
 <h2>今から適用する（早くしろ）</h2>
 タイトル通りです。<br>
-それ以上でもそれ以下でもない（）<br>
+それ以上でもそれ以下でもない（）<br><br>
 ちなみに、今のディレクトリの構造はこんな感じです。<br><br>
 |<br>
  ├ndex.html<br>
