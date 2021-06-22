@@ -70,3 +70,27 @@ body
     border-top: solid 1px #5989cf;
     border-bottom: solid 1px #5989cf;
 }
+/*link_card*/
+.link_card{
+    display:flex;
+    align-items: center;
+    border: solid 2px #e5e5e5;
+    background:#fff;
+    width:400px;
+    margin-top:2em;
+    
+}
+.link_card .img{
+    width:100px;
+    height:100px;
+    float:left;
+    border-right: #e5e5e5 solid 2px;
+}
+.link_card .title{
+    font-weight: bold;
+}
+.link_card:hover{
+    cursor: pointer;
+    background:#efefef;
+    opacity: 0.7;
+}
