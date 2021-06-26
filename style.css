@@ -46,8 +46,8 @@ body
 }
 
 .btn:hover {
-  background-color: #fff000;
-  border-color: #fff000;
+  background-color: #000fff;
+  border-color: #000fff;
   color: #00ff00;
 }
 
@@ -93,4 +93,32 @@ body
     cursor: pointer;
     background:#efefef;
     opacity: 0.7;
+}
+
+/*click_box*/
+.click_box{
+    display: inline-block; _display: inline;
+    width:250px;
+    height:270px;
+    background:linear-gradient(to bottom right, #0000aa, #00aa00);
+    color:#fff;
+    border-radius:1em;
+    box-shadow: 0 0 15px gray;
+}
+.click_box .title{
+    padding-top:30px;
+    text-align:center;
+    font-size:2em;
+    text-decoration: none;
+}
+.click_box .about{
+    padding-top:20px;
+    text-decoration: none;
+}
+.click_box:hover{
+    box-shadow: 0 0 30px gray;
+}
+.click_box_a{
+    padding:20px;
+    text-decoration: none;
 }
