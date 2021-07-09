@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+
+    <body>
+        <div id="logo_img"></div>
+        <div id="ue_menu"></div>
+
+        <h1>brainfuckコンパイラ（OS開発用）</h1>
+        <span style="color:#f00">このサイトはパソコンまたはタブレットで見てください。</span><br>
+        brainfuckをx86アセンブラに変換します。<br>
+        出力されたアセンブリはNASMでアセンブルしてください。他のアセンブラではエラーが出る可能性があります。<br>
+        <button onclick="compile();">コンパイル</button><br>
+        <span style="background:rgb(134, 255, 134);">brainfuck</span>
+        <span style="padding-left:370px;"></span>
+        <span style="background:rgb(255, 141, 141);">アセンブラ</span><br>
+        <textarea id="codearea" rows="30" cols="60" style="background:#1d1a1a;color:rgb(134, 255, 134);"></textarea>
+        <textarea id="outarea" rows="30" cols="60" style="background:#1d1a1a;color:rgb(255, 141, 141);"></textarea>
+
+        <div id="sita_menu"></div>
+        <script src="main.js"></script>
+
+        <script src="../../menu.js"></script>
+    </body>
+</html>
