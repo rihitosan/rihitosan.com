@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../dropdown.css">
+
+        <link rel="stylesheet" href="a11y-dark.min.css">
+        <script src="highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
+	<title>【難解プログラミング言語】brainfuckでOSを自作することができるコンパイラを作った</title>
+	<!--sns card-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@rihitosandayo" />
+	<meta property="og:url" content="js_shooting2.html" />
+	<meta property="og:title" content="【難解プログラミング言語】brainfuckでOS開発をすることができるコンパイラを作った" /> 
+	<meta property="og:description" content="難解プログラミング言語で有名なあのbrainfuckでOSを作ることができる（笑）コンパイラを作りました。" /> 
+	<meta property="og:image" content="https://rihitosan.com/sns_card.png" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94HD20ZTV4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-94HD20ZTV4');
+</script>
+    </head>
+    <body>
+    <div id="logo_img"></div>
+    <div id="ue_menu"></div>
+	<div class="m_text">
+<h1>【難解プログラミング言語】brainfuckでOSを自作することができるコンパイラを作った</h1>
+<span style="color:#f00">この記事は、本当にOS自作をしたいという方には向いていません。</span><br><br>
+こんにちは。<br>
+いきなりですが皆さんはbrainfuckと言うプログラミング言語はご存じでしょうか。（多分知ってる人しか来ない）<br><br>
+brainfuckとは難関プログラミング言語と言われる理解が難しい実用的でないプログラミング言語のことです。<br><br>
+まぁ、文字でだらだらと書いてもよくわからないので難解プログラミング言語の何が難解かはこれを見たらわかるでしょう。<br><br>
+<pre>
+    <code class="brainfuck">
++++++++++[>++++++++>+++++++++++>+++>+<<<<-]>.>++.+++++++..+++.
+>+++++.<<+++++++++++++++.>.+++.------.--------.>+.>+.
+    </code>
+</pre>
+ハイライトの色付けがごちゃごちゃになっているけどまあいいです。<br>
+brainfuckを理解していない人（or見たことない人）はこれは何の処理をしているのかよくわからないでしょう。<br><br>
+これはhello,worldを出力するソースコードです。<br>
+もうどこがはろーわーるどなのかよくわかりません。（´・ω・｀）<br><br>
+
+<a href="https://www.narupi.net/2018/12/05/brainfuck/">このサイト</a>すごい分かりやすいです。僕もここのサイトで理解しました。<br><br>
+brainfuckのインタープリタ<a href="http://www.usamimi.info/~ide/programe/brainfuck/brainfuck.html">http://www.usamimi.info/~ide/programe/brainfuck/brainfuck.html</a>
+<br><br>
+まあここはbrainfuckを分かっている前提で進めます。<br><br>
+さて、こんな実用性が全くないネタ的なプログラミング言語ですが、<br>
+このプログラミング言語でOS開発が出来たら面白いなーと思って、brainfuckとアセンブラが好きな（変人）僕がbrainfuckでOSを作ることができるコンパイラを作ってしまいましたとさ。<br><br>
+
+<h1>作った</h1>
+出来たものはこちらにあります。<br>
+<a href="https://rihitosan.com/tools/bf_compile/">
+<div class="link_card">
+    <img src="img/bfc_s.png" class="img">
+    <span class="title">brainfuckコンパイラ（OS開発用）</span>
+</div>
+</a><br>
+
+使い方は簡単でbrainfuckのところにソースコードを入力して、出力されたアセンブリをアセンブルするだけです。<br><br>
+試しにhello,worldをコンパイルしてアセンブルして起動までやってみます。<br><br>
+<h2>使う</h2>
+<pre>
+    <code class="brainfuck">
++++++++++[>++++++++>+++++++++++>+++>+<<<<-]>.>++.+++++++..+++.
+>+++++.<<+++++++++++++++.>.+++.------.--------.>+.>+.
+    </code>
+</pre>
+①このコードをテキストエリアにコピペします。<br>
+<img src="img/bf_osmake1.png"><br><br>
+②コンパイルボタンを押します。<br>
+<img src="img/bf_osmake2.png"><br><br>
+③アセンブラのテキストエリアのコードをローカルのファイルにコピペします。（拡張子は.asm）<br>
+<img src="img/bf_osmake3.png"><br><br>
+④NASMをダウンロードして、解凍します。NASMはこちらからダウンロードできます。<br>
+<a href="http://www.nasm.us/pub/nasm/releasebuilds/2.11.08/win32/nasm-2.11.08-win32.zip">http://www.nasm.us/pub/nasm/releasebuilds/2.11.08/win32/nasm-2.11.08-win32.zip</a><br><br>
+⑤nasm.exeがあるフォルダに、さっき作ったファイルを移動します。<br>
+<img src="img/bf_osmake4.png"><br><br>
+⑥そのディレクトリで以下のコマンドを実行します。<br>
+<pre>
+    <code style="color:#fff;">
+nasm.exe test.asm
+    </code>
+</pre>
+⑦すると「test」というファイルが出力されると思うので名前を「test.img」に変更します。<br><br>
+⑧（ここではvirtualboxを使いますが、qemuや実機などでもできます。）<br>
+仮想フロッピーディスクにtest.imgを入れます。<br>
+<img src="img/bf_osmake5.png"><br><br>
+⑨無事hello,wolrdが出力されました。<br>
+<img src="img/bf_osmake6.png"><br><br>
+<h1>最後に</h1>
+以上、難解プログラミング言語brainfuckでOSを作る記事でした。<br>
+この記事難解プログラミング言語やos開発に興味を持ってくれたら幸いです。<br>
+では。<br>
+
+</div>
+<div id="sita_menu"></div>
+        </body>
+        <script src="../menu.js"></script>
+</html>
