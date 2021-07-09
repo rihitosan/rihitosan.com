@@ -25,7 +25,13 @@
         <loc>http://rihitosan.com/blog/new-tab-kakkoyoku.html</loc>
 </url>
 <url>
-        <loc>http://rihitosan.com/sitemap.html</loc>
+        <loc>http://rihitosan.com/blog/new-tab-kakkoyoku.html</loc>
+</url>
+<url>
+        <loc>http://rihitosan.com/blog/bf_osmake.html</loc>
+</url>
+<url>
+        <loc>http://rihitosan.com/tools/bf_compile/</loc>
 </url>
         
 </urlset>
